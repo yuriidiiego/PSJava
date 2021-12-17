@@ -11,7 +11,7 @@ import org.springframework.web.server.ResponseStatusException;
 public class ProductRepository {
 
   public ProductRepository() {
-    loadRepository(); // Carrega o repositório com os dados de teste
+    loadRepository();
   }
 
   ArrayList<ProductModel> productRepositoryList = new ArrayList<>(); // Lista de produtos
@@ -93,7 +93,6 @@ public class ProductRepository {
     productRepositoryList.add(product9);
   }
 
-  // Retorna todos os produtos
   public List<ProductModel> findAllProducts() {
     if (productRepositoryList.isEmpty()) {
       throw new ResponseStatusException(
@@ -104,7 +103,6 @@ public class ProductRepository {
     return productRepositoryList;
   }
 
-  // se estiver vazio, retorna "Carrinho vazio", se nao, retorna o carrinho
   public List<ProductModel> findAllCart() {
     if (carrinhoList.isEmpty()) {
       throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Carrinho vazio");
