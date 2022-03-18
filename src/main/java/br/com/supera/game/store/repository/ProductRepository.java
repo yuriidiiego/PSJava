@@ -140,7 +140,7 @@ public class ProductRepository {
         }
       }
     }
-    return "Produto com id especificado nao encontrado"; // Se não encontrar o produto, retorna essa mensagem
+    return "Produto com id especificado nao encontrado";
   }
 
   public String removeCart(int id) { // Remove um produto do carrinho
@@ -150,7 +150,7 @@ public class ProductRepository {
         total -= listaCarrinho.getPrice(); // Subtrai o preço do produto do total
         frete = carrinhoList.size() * 10; // Calcula o valor do frete
 
-        if (frete >= 250) { // Verifica se o frete é maior que 250
+        if (frete >= 250) {
           return (
             "Produto " +
             listaCarrinho.getName() +
@@ -159,14 +159,14 @@ public class ProductRepository {
             total +
             "\nFrete: Gratis"
           );
-        } else { // Se não
+        } else {
           return (
             "Produto " +
             listaCarrinho.getName() +
             " removido com sucesso!\nTotal: " +
             "R$" +
             total +
-            "\nFrete: " + // Retorna o valor total do carrinho
+            "\nFrete: " +
             frete
           );
         }
