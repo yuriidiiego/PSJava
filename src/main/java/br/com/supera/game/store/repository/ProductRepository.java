@@ -7,7 +7,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Repository;
 import org.springframework.web.server.ResponseStatusException;
 
-// This class is a mock repository for the ProductModel.
 @Repository
 public class ProductRepository {
 
